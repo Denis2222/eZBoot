@@ -1,0 +1,50 @@
+parameters:
+    page.rendercontroller.class:      Pad\Bundle\MayaBundle\Controller\PageController
+    container.rendercontroller.class: Pad\Bundle\MayaBundle\Controller\ContainerController
+    search.rendercontroller.class:    Pad\Bundle\MayaBundle\Controller\SearchController
+    menu.rendercontroller.class:      Pad\Bundle\MayaBundle\Controller\MenuController
+
+services:
+    page.controller:
+        class: %page.rendercontroller.class%
+        arguments: [@ezpublish.view_manager,@security.context]
+        calls:
+            - [setContainer, [@service_container] ]
+
+    container.controller:
+        class: %container.rendercontroller.class%
+        arguments: [@ezpublish.view_manager,@security.context]
+        calls:
+            - [setContainer, [@service_container] ]
+
+    search.controller:
+        class: %search.rendercontroller.class%
+        arguments: [@ezpublish.view_manager,@security.context]
+        calls:
+            - [setContainer, [@service_container] ]
+
+
+    menu.controller:
+        class: %menu.rendercontroller.class%
+        arguments: [@ezpublish.view_manager,@security.context]
+        calls:
+            - [setContainer, [@service_container] ]
+
+    config.service:
+        class: Pad\Bundle\MayaBundle\Service\ConfigService
+        arguments: [@ezpublish.api.repository, @ezpublish.config.resolver]
+
+    maya.menu.top:
+        class: Pad\Bundle\MayaBundle\Menu\Builder
+        factory_service: maya.menu.builder
+        factory_method: createTopMenu
+        arguments: [ @request ]
+        scope: request # needed as we have the request as a dependency here
+        tags:
+            - { name: knp_menu.menu, alias: top } # The alias is what is used to retrieve the menu
+
+    maya.pre_content_view_listener:
+        class: Pad\Bundle\MayaBundle\EventListener\PreContentViewListener
+        arguments: [@ezpublish.api.repository, @ezpublish.config.resolver]
+        tags:
+            - {name: kernel.event_listener, event: ezpublish.pre_content_view, method: onPreContentView}
