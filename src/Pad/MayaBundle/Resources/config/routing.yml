@@ -1,3 +1,0 @@
-pad_maya_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: PadMayaBundle:Default:index }
