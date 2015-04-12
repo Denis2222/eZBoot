@@ -1,6 +1,6 @@
 services:
     pad.menu.builder:
-        class: Pad\Bundle\MenuBundle\Menu\Builder
+        class: Pad\MenuBundle\Menu\Builder
         arguments:
             - @knp_menu.factory
             - @ezpublish.api.service.search
@@ -9,7 +9,7 @@ services:
             - @ezpublish.api.service.location
             - @ezpublish.translation_helper
     pad.menu.top:
-        class: Pad\Bundle\MenuBundle\Menu\Builder
+        class: Pad\MenuBundle\Menu\Builder
         factory_service: pad.menu.builder
         factory_method: createTopMenu
         arguments: [ @request ]

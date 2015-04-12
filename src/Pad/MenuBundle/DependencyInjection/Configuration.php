@@ -1,6 +1,6 @@
 <?php
 
-namespace Pad\Bundle\MenuBundle\DependencyInjection;
+namespace Pad\MenuBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

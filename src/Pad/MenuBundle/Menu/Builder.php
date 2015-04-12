@@ -6,7 +6,7 @@
  * @license For full copyright and license information view LICENSE file distributd with this source code.
  * @version //autogentag//
  */
-namespace Pad\Bundle\MenuBundle\Menu;
+namespace Pad\MenuBundle\Menu;
 
 use eZ\Publish\API\Repository\LocationService;
 use eZ\Publish\Core\MVC\ConfigResolverInterface;

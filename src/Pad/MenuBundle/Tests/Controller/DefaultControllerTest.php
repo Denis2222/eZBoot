@@ -1,6 +1,6 @@
 <?php
 
-namespace Pad\Bundle\MenuBundle\Tests\Controller;
+namespace Pad\MenuBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

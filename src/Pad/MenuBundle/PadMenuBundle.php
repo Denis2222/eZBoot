@@ -1,6 +1,6 @@
 <?php
 
-namespace Pad\Bundle\MenuBundle;
+namespace Pad\MenuBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
