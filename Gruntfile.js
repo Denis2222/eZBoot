@@ -1,13 +1,13 @@
 module.exports = function(grunt) {
     grunt.initConfig({
         watch: {
-            files: ['src/**/*.scss'],
+            files: ['src/Pad/LayoutBundle/Resources/public/scss/**/*.scss'],
             tasks: ['sass']
         },
         sass: {
-            dev: {
+            dist: {
                 files: {
-                    'src/**/css/main.css': 'src/**/scss/main.scss'
+                    'src/Pad/LayoutBundle/Resources/public/css/main.css': 'src/Pad/LayoutBundle/Resources/public/scss/main.scss'
                 }
             }
         },
