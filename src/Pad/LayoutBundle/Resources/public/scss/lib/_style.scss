@@ -203,7 +203,7 @@ blockquote:first-letter {
 /* overlay */
 
 .dotted:after {
-    background: url("../images/pattern_dot.png") repeat left top rgba(0,0,0,0.5);
+    //background: url("../images/pattern_dot.png") repeat left top rgba(0,0,0,0.5);
 	content: "";
 	display: block;
 	width: 100%;
@@ -260,7 +260,7 @@ blockquote:first-letter {
 }
 
 #intro-slideshow span.item-image:after {
-    background: url("../images/pattern_dot.png") repeat left top rgba(0,0,0,0.5);
+    //background: url("../images/pattern_dot.png") repeat left top rgba(0,0,0,0.1);
 	content: "";
 	display: block;
 	width: 100%;
@@ -278,6 +278,11 @@ blockquote:first-letter {
     background-size: cover;
     background-position: 50% 50%;
     background-repeat: none;
+}
+
+#intro-slideshow span.item-image-scale-fit{
+	background-repeat:no-repeat;
+	background-size: auto;
 }
 
 #intro-slideshow .owl-wrapper-outer, #intro-slideshow .owl-wrapper, #intro-slideshow .owl-item {
@@ -303,12 +308,12 @@ blockquote:first-letter {
     position: absolute;
 	width: 100%;
 	text-align: center;
-    top: 40%;
+    top: 90%;
 }
 
 .intro-title {
     clear: both;
-    font-size: 60px;
+    font-size: 20px;
     font-weight: 700;
     line-height: 120%;
 	text-align: center;

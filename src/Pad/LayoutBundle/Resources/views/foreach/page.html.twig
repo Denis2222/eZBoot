@@ -32,8 +32,7 @@
                     "ez_content:viewLocation",
                     {
                         'locationId': component.contentInfo.mainLocationId,
-                        'viewType': viewType,
-                        'params': { "first": loop.first }
+                        'viewType': viewType
                     }
                 )
             )
@@ -45,10 +44,10 @@
   <div id="icons-menu" class="transit-top" data-delay="1500" data-appear="false">
     <ul>
         {% for component in preContent %}
-            <li data-title="Overview" data-scrollto="#{{ component.id }}"><i class="icon-eye"></i></li>
+            <li data-title="{{ component.getFieldValue( 'title' ) }}" data-scrollto="#{{ component.id }}"><i class="icon-eye"></i></li>
         {% endfor %}
         {% for component in postContent %}
-            <li data-title="Works" data-scrollto="#{{ component.id }}"><i class="icon-box"></i></li>
+            <li data-title="{{ component.getFieldValue( 'title' ) }}" data-scrollto="#{{ component.id }}"><i class="icon-box"></i></li>
         {% endfor %}
 
         {# 

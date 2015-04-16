@@ -1,4 +1,5 @@
 module.exports = function(grunt) {
+    var autoprefixer = require('autoprefixer-core');
     grunt.initConfig({
         watch: {
             files: ['src/Pad/LayoutBundle/Resources/public/scss/**/*.scss'],
@@ -31,9 +32,17 @@ module.exports = function(grunt) {
                 ],
                 ignorePath: '../../../web'
             }
+        },
+        postcss: {
+            options: {
+                processors: [
+                    autoprefixer({ browser: ['last 2 version'] }).postcss
+                ]
+            },
+            dist: { src: 'src/Pad/LayoutBundle/Resources/public/css/*.css' }
         }
     });
     require('jit-grunt')(grunt);
     grunt.registerTask('default', ['browserSync','watch']);
-    grunt.registerTask('serve', ['sass','browserSync','watch']);
+    grunt.registerTask('serve', ['sass','browserSync','watch','postcss']);
 };

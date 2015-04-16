@@ -1,0 +1,9 @@
+@for $i from 2 through 4 {
+  .block-column-#{$i} {
+  	.ezxmltext-field{
+      //-webkit-column-rule: 1px dotted $primaryColor;
+      -webkit-column-count: $i;
+	  -webkit-column-gap: 15px;
+    }
+  }
+}

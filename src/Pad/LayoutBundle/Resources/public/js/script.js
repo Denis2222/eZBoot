@@ -345,7 +345,7 @@ jQuery(function($){
 			
 			// Icons
 			if(quote >= iconsPos){
-				
+				$('.quick-menu').html();
 				$('.quick-menu').fadeIn(500);				
 				$('.btn-up').fadeIn(500);
 				

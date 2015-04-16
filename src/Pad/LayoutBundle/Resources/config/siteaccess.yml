@@ -9,6 +9,7 @@ siteaccess:
         Map\Host:
             admin.web3.denis-moureu.fr: ezdemo_site_clean_admin
             user.web3.denis-moureu.fr: ezdemo_site_clean_user
+            bibliotheque.christineallue.fr: ezdemo_site_clean_user
             web3-prod.denis-moureu.fr: ezdemo_site_clean_user
             admin.web2.fr: ezdemo_site_clean_admin
             user.web2.fr: ezdemo_site_clean_user

@@ -1,10 +1,14 @@
 system:
-    front_group:
+    ezdemo_site_clean_user:
+        content:
+            tree_root:
+                location_id: 235
+    fre:
         content:
             tree_root:
                 location_id: 77
 
-
+    front_group:
         location_view:
             full:
                 page:
