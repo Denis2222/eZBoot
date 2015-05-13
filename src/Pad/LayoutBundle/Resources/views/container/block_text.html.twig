@@ -10,8 +10,10 @@
   <div class="header-page padd-y-25 bg-fs-clr {{ firstClass }}">
     <div class="title-page padd-x-25 wh-clr">{{ ez_render_field(content,'title') }}</div>
   </div>
-  <div class="post-wrap padd-y-50 boxed block-column-{{ content.getFieldValue( 'columns' ) }}">
+  <div class="post-wrap padd-y-25 boxed block-column-{{ content.getFieldValue( 'columns' ) }}">
+    <div class="post-content padd-x-25">
       <h1>{{ ez_render_field(content,'subtitle') }}</h1>
-    {{ ez_render_field(content,'body') }}
+      {{ ez_render_field(content,'body') }}
+    </div>
   </div>
 </div>

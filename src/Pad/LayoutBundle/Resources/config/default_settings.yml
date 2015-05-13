@@ -9,7 +9,7 @@ parameters:
                     - 'block_youtube'
                     - 'block_text'
                     - 'block_image'
-                limit: 10
+                limit: 20
                 template: 'PadLayoutBundle::foreach.html.twig'
                 viewType: 'item'
         container:
@@ -17,17 +17,17 @@ parameters:
                 classes: ['image']
                 viewType: slide
                 template: 'PadLayoutBundle::foreach.html.twig'
-                limit: 10
+                limit: 20
             block_parallax_slider:
                 classes: ['image']
                 template: 'PadLayoutBundle::foreach.html.twig'
                 viewType: item
-                limit: 10
+                limit: 20
             block_list_page:
                 classes: ['page']
                 template: 'PadLayoutBundle::foreach.html.twig'
                 viewType: item
-                limit: 10
+                limit: 20
         page:
             full:
                 classes:
@@ -38,6 +38,6 @@ parameters:
                     - 'block_text'
                     - 'block_list_page'
                     - 'block_contact'
-                limit: 10
+                limit: 20
                 template: 'PadLayoutBundle:foreach:page.html.twig'
                 viewType: 'container'
